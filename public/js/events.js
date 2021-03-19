@@ -5,8 +5,8 @@ const btn = document.querySelector('.btn');
 
 const screenSizeEval = () => {
   if (window.innerWidth > 480) {
-    videoBackground.setAttribute("src", "obeleye.mp4");
-  } else videoBackground.setAttribute("src", "obeleye-mobile.mp4");
+    videoBackground.setAttribute("src", "../assets/obeleye.mp4");
+  } else videoBackground.setAttribute("src", "../assets/obeleye-mobile.mp4");
 }
 
 btn.addEventListener('click', () => {

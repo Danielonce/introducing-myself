@@ -1,15 +1,36 @@
 @import url('https://fonts.googleapis.com/css?family=Epilogue:200,300,400,500,600,700,800,900&display=swap');
-*
 
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Epilogue', sans-serif;
 }
 
-.btn
-{
+.display {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  z-index: 2;
+}
+
+.display video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.btn {
   display: inline-block;
   font-size: 1em;
   background: #fff;
@@ -40,32 +61,8 @@
   transition: 1s;
 }
 
-.showcase
-{
-  position: absolute;
-  right: 0;
-  width: 100%;
-  min-height: 100vh;
-  padding: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #111;
-  z-index: 2;
-}
 
-.showcase video{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  opacity: 0.8;
-}
-
-.overlay
-{
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -75,14 +72,12 @@
   mix-blend-mode: overlay;
 }
 
-.text
-{
+.text {
   position: absolute;
   z-index: 10;
 }
 
-.text h2
-{
+.text h2 {
   font-size: 3em;
   font-weight: 800;
   color: #fff;
@@ -90,8 +85,7 @@
   text-transform: uppercase;
 }
 
-.text h3
-{
+.text h3 {
   font-size: 2em;
   font-weight: 700;
   color: #fff;
@@ -105,8 +99,7 @@
 
 
 
-.text p
-{
+.text p {
   font-size: 1.1em;
   color: #fff;
   margin: 20px 0;
@@ -143,7 +136,7 @@
   }
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1000px) {
 
   .contact.social img {
     width: 56px;  
@@ -151,7 +144,7 @@
 
 }
 
-@media (max-width: 900px){
+@media (max-width: 900px) {
 
   .contact.social {
     right: 0;
@@ -160,10 +153,10 @@
 
 }
 
-@media (max-width: 566px){
+@media (max-width: 566px) {
 
-  .showcase,
-  .showcase header{
+  .display,
+  .display header{
     padding: 20px;
   }
   
@@ -179,6 +172,18 @@
   .text p {
     font-size: 0.7em;
     font-weight: bold;
+  }
+
+  .contact.social img {
+    width: 47px;  
+  }
+}
+
+@media (max-height: 465px) {
+
+  .contact.social {
+    left: 33%;
+    top: 74px;
   }
 
   .contact.social img {
